@@ -13,5 +13,10 @@ namespace WebApiDemo.Controllers
         {
             return View();
         }
+
+        public ActionResult Get()
+        {
+            return View();
+        }
     }
 }

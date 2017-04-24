@@ -1,0 +1,52 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Get</title>
+    <script src="~/Scripts/jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            $.ajax({
+                type: "get",
+                url: "../api/GetAPI/Get",
+                data: { id: 1, name: "Jim", time: "1988-09-11" },
+                success: function (data, status) {
+                    if (status == "success") {
+                        $("#result1").html(data);
+                    }
+                }
+            });
+
+
+            var postdata = { id: 2, name: "Jim", sex: "男", time: "1988-09-11", };
+            $.ajax({
+                type: "get",
+                url: "../api/GetAPI/GetModel",
+                data: postdata,
+                success: function (data, status) {
+                    if (status == "success") {
+                        console.log(data);
+                        $("#result2").html(data);
+                    }
+                },
+                error: function (data) {
+                    console.log(data);
+                }
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="result1">
+    </div>
+    <div id="result2">
+    </div>
+</body>
+</html>
