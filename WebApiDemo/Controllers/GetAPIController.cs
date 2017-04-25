@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System;
 using System.Web.Http;
 using WebApiDemo.Models;
 
@@ -14,9 +14,16 @@ namespace WebApiDemo.Controllers
         }
 
         [HttpGet]
-        public string GetModel([FromUri]Person person)
+        public string GetAllChargingData([FromUri]Person person)
         {
-            return String.Format("GetModel?id={0}&name={1}&time={2}&sex={3}", person.id, person.name, person.time, person.sex);
+            return String.Format("GetAllChargingData?id={0}&name={1}&time={2}&sex={3}", person.id, person.name, person.time, person.sex);
+        }
+
+        [HttpGet]
+        public string GetByModel(string strQuery)
+        {
+            Person person = JsonConvert.DeserializeObject<Person>(strQuery);
+            return String.Format("GetByModel?id={0}&name={1}&time={2}&sex={3}", person.id, person.name, person.time, person.sex);
         }
 
         //// GET api/<controller>

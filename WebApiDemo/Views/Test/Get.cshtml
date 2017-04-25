@@ -14,22 +14,40 @@
             $.ajax({
                 type: "get",
                 url: "../api/GetAPI/Get",
-                data: { id: 1, name: "Jim", time: "1988-09-11" },
+                data: { id: 111, name: "Jim", time: "1988-09-11" },
                 success: function (result, status) {
                     if (status == "success") {
                         $("#result1").html(result);
                     }
+                },
+                error: function (result) {
+                    alert(result);
                 }
             });
 
             $.ajax({
                 type: "get",
-                url: "../api/GetAPI/hahaha",
+                url: "../api/GetAPI/GetAllChargingData",
                 dataType: "text",
-                data: { id: 8888, sex: "男", name: "黄飞鸿", time: "1990-1-1" },
+                data: { id: 222, sex: "男", name: "黄飞鸿", time: "1990-1-1" },
                 success: function (result, status) {
                     if (status == "success") {
                         $("#result2").html(result);
+                    }
+                },
+                error: function (result) {
+                    alert(result);
+                }
+            });
+
+            $.ajax({
+                type: "get",
+                url: "../api/GetAPI/GetByModel",
+                dataType: "text",
+                data: { strQuery: JSON.stringify({ id: 333, sex: "男", name: "黄飞鸿", time: "1990-1-1" }) },
+                success: function (result, status) {
+                    if (status == "success") {
+                        $("#result3").html(result);
                     }
                 },
                 error: function (result) {
@@ -43,6 +61,8 @@
     <div id="result1">
     </div>
     <div id="result2">
+    </div>
+    <div id="result3">
     </div>
 </body>
 </html>
