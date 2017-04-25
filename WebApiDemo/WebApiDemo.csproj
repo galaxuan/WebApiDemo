@@ -113,6 +113,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\GetAPIController.cs" />
+    <Compile Include="Controllers\PostAPIController.cs" />
+    <Compile Include="Controllers\TestAPIController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

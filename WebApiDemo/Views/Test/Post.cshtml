@@ -9,9 +9,45 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Post</title>
+    <script src="~/Scripts/jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            //$.ajax({
+            //    type: "post",
+            //    url: "../api/PostAPI/SaveData",
+            //    data: { "": "Jim" },
+            //    success: function (result, status) {
+            //        if (status == "success") {
+            //            $("#result1").html(result);
+            //        }
+            //    },
+            //    error: function (result) {
+            //        alert(result);
+            //    }
+            //});
+
+            $.ajax({
+                type: "post",
+                url: "../api/PostAPI/SaveData2",
+                data: JSON.stringify({ name: "Jim", des: "备注" }),
+                success: function (result, status) {
+                    if (status == "success") {
+                        $("#result1").html(result);
+                    }
+                },
+                error: function (result) {
+                    alert(result);
+                }
+            });
+        });
+    </script>
 </head>
 <body>
-    <div> 
+    <div id="result1">
+    </div>
+    <div id="result2">
+    </div>
+    <div id="result3">
     </div>
 </body>
 </html>

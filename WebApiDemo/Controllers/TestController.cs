@@ -18,5 +18,10 @@ namespace WebApiDemo.Controllers
         {
             return View();
         }
+
+        public ActionResult Post()
+        {
+            return View();
+        }
     }
 }
