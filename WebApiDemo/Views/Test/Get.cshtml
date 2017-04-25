@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
 
@@ -16,29 +15,26 @@
                 type: "get",
                 url: "../api/GetAPI/Get",
                 data: { id: 1, name: "Jim", time: "1988-09-11" },
-                success: function (data, status) {
+                success: function (result, status) {
                     if (status == "success") {
-                        $("#result1").html(data);
+                        $("#result1").html(result);
                     }
                 }
             });
 
-
-            var postdata = { id: 2, name: "Jim", sex: "男", time: "1988-09-11", };
             $.ajax({
                 type: "get",
-                url: "../api/GetAPI/GetModel",
-                data: postdata,
-                success: function (data, status) {
+                url: "../api/GetAPI/hahaha",
+                dataType: "text",
+                data: { id: 8888, sex: "男", name: "黄飞鸿", time: "1990-1-1" },
+                success: function (result, status) {
                     if (status == "success") {
-                        console.log(data);
-                        $("#result2").html(data);
+                        $("#result2").html(result);
                     }
                 },
-                error: function (data) {
-                    console.log(data);
+                error: function (result) {
+                    alert(result);
                 }
-
             });
         });
     </script>

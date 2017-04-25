@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using WebApiDemo.Models;
 
@@ -19,35 +16,34 @@ namespace WebApiDemo.Controllers
         [HttpGet]
         public string GetModel([FromUri]Person person)
         {
-            return String.Format("Get2?id={0}&name={1}&time={2}", person.id, person.name, person.time);
+            return String.Format("GetModel?id={0}&name={1}&time={2}&sex={3}", person.id, person.name, person.time, person.sex);
         }
 
+        //// GET api/<controller>
+        //public IEnumerable<string> Get()
+        //{
+        //    return new string[] { "value1", "value2" };
+        //}
 
-        // GET api/<controller>
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
+        //// GET api/<controller>/5
+        //public string Get(int id)
+        //{
+        //    return "value";
+        //}
 
-        // GET api/<controller>/5
-        public string Get(int id)
-        {
-            return "value";
-        }
+        //// POST api/<controller>
+        //public void Post([FromBody]string value)
+        //{
+        //}
 
-        // POST api/<controller>
-        public void Post([FromBody]string value)
-        {
-        }
+        //// PUT api/<controller>/5
+        //public void Put(int id, [FromBody]string value)
+        //{
+        //}
 
-        // PUT api/<controller>/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/<controller>/5
-        public void Delete(int id)
-        {
-        }
+        //// DELETE api/<controller>/5
+        //public void Delete(int id)
+        //{
+        //}
     }
 }
