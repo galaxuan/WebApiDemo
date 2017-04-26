@@ -26,10 +26,41 @@
             //    }
             //});
 
+            //$.ajax({
+            //    type: "post",
+            //    url: "../api/PostAPI/SaveData2",
+            //    data: JSON.stringify({ name: "Jim", des: "备注" }),
+            //    contentType: 'application/json',
+            //    success: function (result, status) {
+            //        if (status == "success") {
+            //            $("#result1").html(result);
+            //        }
+            //    },
+            //    error: function (result) {
+            //        alert(result);
+            //    }
+            //});
+
+            //$.ajax({
+            //    type: "post",
+            //    url: "../api/PostAPI/SaveData3",
+            //    data: { id: 222, sex: "男", name: "黄飞鸿", time: "1990-1-1" },
+            //    success: function (result, status) {
+            //        if (status == "success") {
+            //            $("#result1").html(result);
+            //        }
+            //    },
+            //    error: function (result) {
+            //        alert(result);
+            //    }
+            //});
+
+            var postdata = { id: 222, sex: "男", name: "黄飞鸿", time: "1990-1-1" };
             $.ajax({
                 type: "post",
-                url: "../api/PostAPI/SaveData2",
-                data: JSON.stringify({ name: "Jim", des: "备注" }),
+                url: "../api/PostAPI/SaveData4",
+                contentType: 'application/json',
+                data: JSON.stringify({ key: "011", Charging: postdata }),
                 success: function (result, status) {
                     if (status == "success") {
                         $("#result1").html(result);
