@@ -111,6 +111,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\DeleteAPIController.cs" />
     <Compile Include="Controllers\GetAPIController.cs" />
     <Compile Include="Controllers\Post2APIController.cs" />
     <Compile Include="Controllers\PostAPIController.cs" />
@@ -132,6 +133,7 @@
     <Content Include="Views\Test\Post.cshtml" />
     <Content Include="Views\Test\Post2.cshtml" />
     <Content Include="Views\Test\Put.cshtml" />
+    <Content Include="Views\Test\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
