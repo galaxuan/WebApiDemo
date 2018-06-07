@@ -1,9 +1,5 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using WebApiDemo.Models;
 
@@ -37,6 +33,5 @@ namespace WebApiDemo.Controllers
             var person = JsonConvert.DeserializeObject<Person>(Convert.ToString(obj.Charging));
             return String.Format("SaveData4?id={0}&name={1}&time={2}&sex={3}", person.id, person.name, person.time, person.sex);
         }
-
     }
 }

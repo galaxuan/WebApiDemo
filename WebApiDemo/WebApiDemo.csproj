@@ -114,6 +114,7 @@
     <Compile Include="Controllers\GetAPIController.cs" />
     <Compile Include="Controllers\Post2APIController.cs" />
     <Compile Include="Controllers\PostAPIController.cs" />
+    <Compile Include="Controllers\PutAPIController.cs" />
     <Compile Include="Controllers\TestAPIController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
@@ -130,6 +131,7 @@
     <Content Include="Views\Test\Index.cshtml" />
     <Content Include="Views\Test\Post.cshtml" />
     <Content Include="Views\Test\Post2.cshtml" />
+    <Content Include="Views\Test\Put.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
