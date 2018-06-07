@@ -112,6 +112,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\GetAPIController.cs" />
+    <Compile Include="Controllers\Post2APIController.cs" />
     <Compile Include="Controllers\PostAPIController.cs" />
     <Compile Include="Controllers\TestAPIController.cs" />
     <Compile Include="Controllers\TestController.cs" />
@@ -128,6 +129,7 @@
     <Content Include="Views\Test\Get.cshtml" />
     <Content Include="Views\Test\Index.cshtml" />
     <Content Include="Views\Test\Post.cshtml" />
+    <Content Include="Views\Test\Post2.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

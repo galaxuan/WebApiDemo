@@ -14,6 +14,9 @@ namespace WebApiDemo.Models
         /// </summary>
         public string name { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public string sex { get; set; }
 
         /// <summary>

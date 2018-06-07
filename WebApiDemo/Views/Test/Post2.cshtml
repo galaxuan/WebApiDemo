@@ -1,0 +1,47 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Post</title>
+    <script src="~/Scripts/jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            //var arr1 = ["1", "2", "3", "4"];
+            //$.ajax({
+            //    type: "post",
+            //    url: "../api/Post2API/SaveData",
+            //    contentType: 'application/json',
+            //    data: JSON.stringify(arr1),
+            //    success: function (data, status) { }
+            //});
+
+            var arr2 = [
+                { id: "1", name: "Jim", time: "1988-09-11" },
+                { id: "2", name: "Lilei", time: "1990-12-11" },
+                { id: "3", name: "Lucy", time: "1986-01-10" }
+            ];
+            $.ajax({
+                type: "post",
+                url: "../api/Post2API/SaveData2",
+                contentType: 'application/json',
+                data: JSON.stringify(arr2),
+                success: function (data, status) { }
+            });
+            
+        });
+    </script>
+</head>
+<body>
+    <div id="result1">
+    </div>
+    <div id="result2">
+    </div>
+    <div id="result3">
+    </div>
+</body>
+</html>
